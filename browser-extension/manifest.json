@@ -1,0 +1,12 @@
+{
+  "name": "utAPIa",
+  "version": "0.3",
+  "description": "Including Privacy Policies on RAR objects",
+  "permissions": ["<all_urls>", "tabs", "activeTab","webRequest","webRequestBlocking"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "manifest_version": 2
+}

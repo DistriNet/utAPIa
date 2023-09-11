@@ -1,0 +1,96 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "utAPIa",
+    "description" : "Proof-of-Concept implementation",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "https://api.utapia.distrinet-research.be"
+  } ],
+  "paths" : {
+    "/userinfo" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "API call successful Inspector",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/User"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n  \"given_name\":   \"John\",\n  \"family_name\":   \"Doe\",\n  \"email\":  \"john.doe@example.com\",\n  \"dob\":    \"2001-10-02\",\n  \"gender\":   \"M\",\n  \"occupations\":   \"CEO at Awesome Org\"\n}\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://api.utapia.distrinet-research.be"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://api.utapia.distrinet-research.be"
+      } ]
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "oauth2" : {
+        "type" : "oauth2",
+        "flows" : {
+          "implicit" : {
+            "authorizationUrl" : "https://authorization.utapia.distrinet-research.be/",
+            "scopes" : {
+              "scope_name" : "Enter your scopes here"
+            }
+          }
+        }
+      }
+    },
+    "schemas" : {
+      "User" : {
+        "type" : "object",
+        "properties" : {
+          "given_name" : {
+            "type" : "string",
+            "editable" : true,
+            "removeable" : true
+          },
+          "family_name" : {
+            "type" : "string",
+            "editable" : true,
+            "removeable" : true
+          },
+          "email" : {
+            "type" : "string",
+            "format" : "email",
+            "editable" : true,
+            "removeable" : true
+          },
+          "dob" : {
+            "type" : "string",
+            "format" : "date",
+            "editable" : true,
+            "removeable" : true
+          },
+          "gender" : {
+            "type" : "string",
+            "editable" : true,
+            "removeable" : true
+          },
+          "occupations" : {
+            "type" : "string",
+            "editable" : true,
+            "removeable" : true
+          }
+        },
+        "description" : "This is an API response"
+      }
+    }
+  }
+}
